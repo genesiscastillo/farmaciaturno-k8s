@@ -6,5 +6,6 @@ metadata:
     app: farmaciaturno
   name: farmaciaturno
 data:
-  cm_url_minsal_comunas_por_regiones: "https://midastest.minsal.cl/farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones"
-  cm_url_minsal_locales_por_regiones: "https://farmanet.minsal.cl/maps/index.php/ws/getLocalesRegion"
+  cm_url_minsal_comunas_por_regiones: https://midastest.minsal.cl/farmacias/maps/index.php/utilidades/maps_obtener_comunas_por_regiones
+  cm_url_minsal_locales_por_regiones: https://farmanet.minsal.cl/maps/index.php/ws/getLocalesRegion
+  cm_url_minsal_id_region: 7

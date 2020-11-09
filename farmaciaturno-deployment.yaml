@@ -31,4 +31,9 @@ spec:
             configMapKeyRef:
               name: farmaciaturno
               key: cm_url_minsal_locales_por_regiones
+        - name: URL_MINSAL_ID_REGION
+          valueFrom:
+            configMapKeyRef:
+              name: farmaciaturno
+              key: cm_url_minsal_id_region
 status: {}
