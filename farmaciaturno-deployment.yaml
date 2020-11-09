@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: farmaciaturno
+  name: farmaciaturno
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: farmaciaturno
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: farmaciaturno
+    spec:
+      containers:
+      - image: gcr.io/sing-in-dev-284714/farmaciaturno
+        name: farmaciaturno
+        env:
+        - name: URL_MINSAL_COMUNAS_POR_REGIONES
+          valueFrom:
+            configMapKeyRef:
+              name: farmaciaturno
+              key: cm_url_minsal_comunas_por_regiones
+        - name: URL_MINSAL_LOCALES_POR_REGIONES
+          valueFrom:
+            configMapKeyRef:
+              name: farmaciaturno
+              key: cm_url_minsal_locales_por_regiones
+status: {}

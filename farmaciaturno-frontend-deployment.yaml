@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: farmaciaturno-frontend
+  name: farmaciaturno-frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: farmaciaturno-frontend
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: farmaciaturno-frontend
+    spec:
+      containers:
+      - image: gcr.io/sing-in-dev-284714/farmaciaturno-frontend
+        name: farmaciaturno-frontend
+        resources: {}
+status: {}
